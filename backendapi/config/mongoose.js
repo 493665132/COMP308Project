@@ -15,8 +15,11 @@ module.exports = function () {
       console.log("Error");
     });
 
-  // Load the 'User' and 'Course' model
-  require("../models/user.server.model");
+  // Load the 'Users' and 'DailyInfo'  and 'HDChecklist' and 'EmergencyAlert' models
+  require("../app/models/user.server.model");
+  require("../app/models/dailyinfo.server.model");
+  require("../app/models/hdchecklist.server.model");
+  require("../app/models/emergencyalert.server.model")
 
   // Return the Mongoose connection instance
   return db;

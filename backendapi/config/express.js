@@ -2,9 +2,13 @@
 //
 // Load the module dependencies
 const express = require("express");
-//const studentRoutes = require("../app/routes/user.server.route");
+const userRoutes = require("../app/routes/user.server.route");
+const dailyInfoRoutes = require("../app/routes/dailyinfo.server.route");
+const hdchecklistRoutes = require("../app/routes/hdchecklist.server.route");
+const emergencyAlertRoutes = require("../app/routes/emergencyalert.server.route");
+const authRoutes = require("../app/routes/auth.server.route");
 const passport = require("passport");
-//const passport_middleware = require("./passport");
+const passport_middleware = require("./passport");
 
 var config = require("./config"),
   // express = require("express"),
@@ -52,9 +56,15 @@ module.exports = function () {
       secret: config.sessionSecret,
     })
   );
-//   app.use(passport.initialize());
-//   app.use(passport.session());
-//   app.use(passport_middleware);
- 
+  app.use(passport.initialize());
+  app.use(passport.session());
+  app.use(passport_middleware);
+
+  app.use("/users", userRoutes);
+  app.use("/dailyinfo", dailyInfoRoutes);
+  app.use("/hdchecklist", hdchecklistRoutes);
+  app.use("/emergencyalerts", emergencyAlertRoutes);
+  app.use("/auth", authRoutes);
+
   return app;
 };

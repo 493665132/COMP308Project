@@ -13,8 +13,8 @@ var db = mongoose();
 // Create a new Express application instance
 var app = express();
 // Use the Express application instance to listen to the '3000' port
-app.listen(8080);
+app.listen(5000);
 // Use the module.exports property to expose our Express application instance for external usage
 module.exports = app; //returns the application object
 // Log the server status to the console
-console.log("Server running at http://localhost:8080");
+console.log("Server running at http://localhost:5000");
