@@ -1,7 +1,7 @@
 //const EmergencyAlert = require("mongoose").model("EmergencyAlerts");
 const EmergencyAlert = require("../models/emergencyalert.server.model");
 
-//Add new Emergency Alert
+//Insert new Emergency Alert
 exports.InsertEmergencyAlert = async (req, res, next) => {
   console.log("InserEmergencyAlert called", req.body);
   //Create a new instance of the 'EmergencyAlert' Mongoose model

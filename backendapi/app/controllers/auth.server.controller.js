@@ -24,7 +24,7 @@ exports.loginUser = (req, res, next) => {
   })(req, res);
 };
 
-//deletes the token on the client side by clearing the cookie named 'token'
+//delete the token on the client side by clearing the cookie named 'token'
 exports.logout = (req, res) => {
   res.clearCookie("token");
   return res.status("200").json({ message: "Logged out" });

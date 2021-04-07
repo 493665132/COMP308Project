@@ -20,7 +20,7 @@ exports.InsertDailyInfo = async (req, res, next) => {
     });
 };
 
-//Get all DailyInfo
+//Get all Daily Info
 exports.getAllDailyInfo = async (req, res) => {
   await DailyInfo.find()
     .sort("-created")

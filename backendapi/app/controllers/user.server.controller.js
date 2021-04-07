@@ -93,6 +93,7 @@ exports.deleteUserById = async (req, res) => {
     });
 };
 
+//This method will check if the user is already have an account or reigstred in the DB
 exports.saveUserDBCall = (body) => {
   return new Promise((resolve, reject) => {
     User.findOne({ username: body.username }).then((result) => {

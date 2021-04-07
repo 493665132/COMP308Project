@@ -1,7 +1,7 @@
 //const HDChecklist = require("mongoose").model("HDChecklist");
 const HDChecklist = require("../models/hdchecklist.server.model");
 
-//Add new HDChecklist
+//Insert new HDChecklist
 exports.InsertHDChecklist = async (req, res, next) => {
   console.log("InserHDChecklist called", req.body);
   //Create a new instance of the 'HDChecklist' Mongoose model
