@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const dailyInfo = require("../controllers/dailyinfor.server.controller");
+const dailyInfo = require("../controllers/dailyinfo.server.controller");
 const verifyUser = require("../../config/auth");
 //Getting All daily Info
 router.get("/", verifyUser.verify, dailyInfo.getAllDailyInfo);
