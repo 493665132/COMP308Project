@@ -2,7 +2,7 @@ const User = require("../models/user.server.model");
 const passport = require("passport");
 const jwt = require("jsonwebtoken");
 const jwtSecret = "jsonwebtokensecret";
-const jwtExpirySeconds = 3600; // One hour use of token before it expire
+const jwtExpirySeconds = 3600; // One hour use of token before it expires
 const { saveUserDBCall } = require("../controllers/user.server.controller.js");
 
 exports.loginUser = (req, res, next) => {
