@@ -1,4 +1,4 @@
-//const DailyInfo = require("mongoose").model("DailyInfo");
+//const DailyInfo = require("mongoose").model("DailyInfo");...
 const DailyInfo = require("../models/dailyinfo.server.model");
 
 //Add new DailyInfo
