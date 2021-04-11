@@ -25,7 +25,7 @@ const HDChecklistSchema = new Schema({
     required: true,
   },
   identifyAsFemale: {
-    type: Number,
+    type: Boolean,
     required: true,
   },
   serumColesterolmg: {
