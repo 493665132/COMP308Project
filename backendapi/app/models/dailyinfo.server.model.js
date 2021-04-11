@@ -10,7 +10,7 @@ const DailyInfoSchema = new Schema({
     required: true,
   },
   bloodpressure: {
-    type: String,
+    type: Number,
     required: true,
   },
   weight: {
